@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Study3DAction",
+			"Path": "..\\Source\\Study3DAction.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Study3DActionEditor",
+			"Path": "..\\Source\\Study3DActionEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

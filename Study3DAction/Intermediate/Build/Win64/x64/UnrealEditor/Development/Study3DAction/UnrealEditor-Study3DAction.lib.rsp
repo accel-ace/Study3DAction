@@ -1,0 +1,17 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Study3DAction.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\Study3DActionEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\UnrealEditor\Development\Study3DAction\Study3DAction.init.gen.cpp.obj"
+"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\UnrealEditor\Development\Study3DAction\Study3DActionCharacter.gen.cpp.obj"
+"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\UnrealEditor\Development\Study3DAction\Study3DActionGameMode.gen.cpp.obj"
+"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\UnrealEditor\Development\Study3DAction\Study3DAction.cpp.obj"
+"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\UnrealEditor\Development\Study3DAction\Study3DActionCharacter.cpp.obj"
+"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\UnrealEditor\Development\Study3DAction\Study3DActionGameMode.cpp.obj"
+"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\UnrealEditor\Development\Study3DAction\Default.rc2.res"
+/OUT:"D:\workspace\UE5Projects\Study3DAction\Study3DAction\Intermediate\Build\Win64\x64\UnrealEditor\Development\Study3DAction\UnrealEditor-Study3DAction.lib"
