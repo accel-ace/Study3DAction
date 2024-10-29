@@ -3,6 +3,7 @@
 #include "Study3DActionGameMode.h"
 #include "Study3DActionCharacter.h"
 #include "UObject/ConstructorHelpers.h"
+#include "Study3DActionCharacter.h"
 
 AStudy3DActionGameMode::AStudy3DActionGameMode()
 {
@@ -12,4 +13,5 @@ AStudy3DActionGameMode::AStudy3DActionGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+	//DefaultPawnClass = AStudy3DActionCharacter::StaticClass();
 }

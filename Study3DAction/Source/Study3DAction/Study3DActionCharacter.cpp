@@ -86,6 +86,11 @@ void AStudy3DActionCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AStudy3DActionCharacter::Look);
+
+		// Unique
+		EnhancedInputComponent->BindAction(UniqueAction, ETriggerEvent::Triggered, this, &AStudy3DActionCharacter::Unique);
+		// Right
+		EnhancedInputComponent->BindAction(RightAction, ETriggerEvent::Triggered, this, &AStudy3DActionCharacter::Right);
 	}
 	else
 	{
@@ -127,4 +132,14 @@ void AStudy3DActionCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void AStudy3DActionCharacter::Unique(const FInputActionValue& Value)
+{
+	UE_LOG(LogTemp, Log, TEXT("Push_Unique"));
+}
+
+void AStudy3DActionCharacter::Right(const FInputActionValue& Value)
+{
+	UE_LOG(LogTemp, Log, TEXT("Push_Right"));
 }
