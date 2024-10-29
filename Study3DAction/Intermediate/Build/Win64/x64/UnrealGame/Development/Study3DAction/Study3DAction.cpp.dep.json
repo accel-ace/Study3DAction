@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\workspace\\ue5projects\\study3daction\\study3daction\\source\\study3daction\\study3daction.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\workspace\\ue5projects\\study3daction\\study3daction\\intermediate\\build\\win64\\x64\\study3daction\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\workspace\\ue5projects\\study3daction\\study3daction\\intermediate\\build\\win64\\x64\\unrealgame\\development\\study3daction\\definitions.study3daction.h",
+            "d:\\workspace\\ue5projects\\study3daction\\study3daction\\source\\study3daction\\study3daction.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
