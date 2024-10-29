@@ -105,6 +105,28 @@ struct Z_Construct_UClass_AStudy3DActionCharacter_Statics
 		{ "ToolTip", "Look Input Action" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UniqueAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Look Input Action */" },
+#endif
+		{ "ModuleRelativePath", "Study3DActionCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Look Input Action" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RightAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Look Input Action */" },
+#endif
+		{ "ModuleRelativePath", "Study3DActionCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Look Input Action" },
+#endif
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
@@ -112,6 +134,8 @@ struct Z_Construct_UClass_AStudy3DActionCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_UniqueAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RightAction;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -125,6 +149,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStudy3DAction
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AStudy3DActionCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpAction_MetaData), NewProp_JumpAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AStudy3DActionCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AStudy3DActionCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_UniqueAction = { "UniqueAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AStudy3DActionCharacter, UniqueAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UniqueAction_MetaData), NewProp_UniqueAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_RightAction = { "RightAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AStudy3DActionCharacter, RightAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RightAction_MetaData), NewProp_RightAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AStudy3DActionCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_FollowCamera,
@@ -132,6 +158,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AStudy3DA
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_JumpAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_MoveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_LookAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_UniqueAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AStudy3DActionCharacter_Statics::NewProp_RightAction,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AStudy3DActionCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AStudy3DActionCharacter_Statics::DependentSingletons[])() = {
@@ -174,10 +202,10 @@ AStudy3DActionCharacter::~AStudy3DActionCharacter() {}
 struct Z_CompiledInDeferFile_FID_workspace_UE5Projects_Study3DAction_Study3DAction_Source_Study3DAction_Study3DActionCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AStudy3DActionCharacter, AStudy3DActionCharacter::StaticClass, TEXT("AStudy3DActionCharacter"), &Z_Registration_Info_UClass_AStudy3DActionCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStudy3DActionCharacter), 3592364607U) },
+		{ Z_Construct_UClass_AStudy3DActionCharacter, AStudy3DActionCharacter::StaticClass, TEXT("AStudy3DActionCharacter"), &Z_Registration_Info_UClass_AStudy3DActionCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AStudy3DActionCharacter), 2624131166U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_workspace_UE5Projects_Study3DAction_Study3DAction_Source_Study3DAction_Study3DActionCharacter_h_3892139220(TEXT("/Script/Study3DAction"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_workspace_UE5Projects_Study3DAction_Study3DAction_Source_Study3DAction_Study3DActionCharacter_h_1952360735(TEXT("/Script/Study3DAction"),
 	Z_CompiledInDeferFile_FID_workspace_UE5Projects_Study3DAction_Study3DAction_Source_Study3DAction_Study3DActionCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_workspace_UE5Projects_Study3DAction_Study3DAction_Source_Study3DAction_Study3DActionCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

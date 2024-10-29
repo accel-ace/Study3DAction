@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\workspace\\ue5projects\\study3daction\\study3daction\\source\\study3daction\\private\\hud\\ahudingame.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\workspace\\ue5projects\\study3daction\\study3daction\\intermediate\\build\\win64\\x64\\study3dactioneditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\workspace\\ue5projects\\study3daction\\study3daction\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\study3daction\\definitions.study3daction.h",
+            "d:\\workspace\\ue5projects\\study3daction\\study3daction\\source\\study3daction\\public\\hud\\ahudingame.h",
+            "d:\\uelibrary\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\hud.h",
+            "d:\\uelibrary\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\hudhitbox.h",
+            "d:\\uelibrary\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\debugtextinfo.h",
+            "d:\\uelibrary\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\debugtextinfo.generated.h",
+            "d:\\uelibrary\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\hud.generated.h",
+            "d:\\workspace\\ue5projects\\study3daction\\study3daction\\intermediate\\build\\win64\\unrealeditor\\inc\\study3daction\\uht\\ahudingame.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

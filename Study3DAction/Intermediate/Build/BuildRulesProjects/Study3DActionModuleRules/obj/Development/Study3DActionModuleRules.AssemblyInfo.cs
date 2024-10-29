@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Study3DActionModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eab3183ba8965b108b9e9ac6ed70ec1956f1092d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5cec7372f10a14e3ff6d895efbe8b3d3bd97630")]
 [assembly: System.Reflection.AssemblyProductAttribute("Study3DActionModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Study3DActionModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

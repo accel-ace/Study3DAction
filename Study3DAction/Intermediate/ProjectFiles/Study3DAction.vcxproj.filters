@@ -57,5 +57,23 @@
     <ClInclude Include="..\..\Source\Study3DAction\Study3DActionGameMode.h">
       <Filter>Source\Study3DAction</Filter>
     </ClInclude>
+    <Filter Include="Source\Study3DAction\Private">
+      <UniqueIdentifier>{09A148B3-E81D-332B-A32F-8DA2C4E40B07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Study3DAction\Private\HUD">
+      <UniqueIdentifier>{DFFC61CA-A7EB-38DE-A8A2-31B4B508DF28}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Study3DAction\Private\HUD\AHUDInGame.cpp">
+      <Filter>Source\Study3DAction\Private\HUD</Filter>
+    </ClCompile>
+    <Filter Include="Source\Study3DAction\Public">
+      <UniqueIdentifier>{0CE65EEF-9430-3462-85D4-8EA81BD352ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Study3DAction\Public\HUD">
+      <UniqueIdentifier>{200CFD93-AE60-3CE6-8D7D-F83367DE4AF6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Study3DAction\Public\HUD\AHUDInGame.h">
+      <Filter>Source\Study3DAction\Public\HUD</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
