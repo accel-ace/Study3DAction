@@ -4,23 +4,31 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Components/SplineComponent.h"
-#include "ZipLineActor.generated.h"
+#include "ZipLineActor.h"
+#include "ScaffoldActor.generated.h"
 
 UCLASS()
-class STUDY3DACTION_API AZipLineActor : public AActor
+class STUDY3DACTION_API AScaffoldActor : public AActor
 {
 	GENERATED_BODY()
 
 private:
 
-	USplineComponent* SplineComponent;
+	UPROPERTY(EditAnywhere, CAtegory = "ZipLine")
+	AZipLineActor* ZipLineActor;
 
-	float LocalLength = 0.0f;
+	float MoveDistanceLocation = 0.0f;
+	
+	UPROPERTY(EditAnywhere, Category = "ZipLine")
+	float Speed = 50.0f;
+
+	UPROPERTY(EditAnyWhere, CAtegory = "ZipLine")
+	bool bIsLoop = true;
+
 	
 public:	
 	// Sets default values for this actor's properties
-	AZipLineActor();
+	AScaffoldActor();
 
 protected:
 	// Called when the game starts or when spawned
@@ -29,15 +37,5 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-public:
-
-	FVector GetCurrentLocation(float Length, bool Loop);
-
-private:
-
-	float GetSplineLength();
-
-	bool IsArrived(float Length);
 
 };

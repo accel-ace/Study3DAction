@@ -22,7 +22,8 @@ void AZipLineActor::BeginPlay()
 	for (auto aComponent : aActorComponents)
 	{
 		if (Cast<USplineComponent>(aComponent) != nullptr) {
-			SplineComponent = Cast<USplineComponent>(aComponent);
+			TObjectPtr<USplineComponent> SplinePtr = Cast<USplineComponent>(aComponent);
+			SplineComponent = SplinePtr.Get();
 		}
 	}
 }
@@ -34,15 +35,25 @@ void AZipLineActor::Tick(float DeltaTime)
 
 }
 
-void AZipLineActor::GetCurrentLocation(float Length, bool Lerp)
+FVector AZipLineActor::GetCurrentLocation(float Length, bool Loop)
 {
+	LocalLength = Length;
+	if (Loop) {
+		LocalLength = fmod(Length, SplineComponent->GetSplineLength());
+	}
+
+	FVector Location = SplineComponent->GetLocationAtDistanceAlongSpline(LocalLength, ESplineCoordinateSpace::Type::World);
+
+	return Location;
 }
 
-void AZipLineActor::GetSplineLength()
+float AZipLineActor::GetSplineLength()
 {
+	return SplineComponent->GetSplineLength();
 }
 
-void AZipLineActor::IsArrived(float Length)
+bool AZipLineActor::IsArrived(float Length)
 {
+	return SplineComponent->GetSplineLength() >= Length;
 }
 
