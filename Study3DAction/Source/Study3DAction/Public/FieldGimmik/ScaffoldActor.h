@@ -18,11 +18,16 @@ private:
 	AZipLineActor* ZipLineActor;
 
 	float MoveDistanceLocation = 0.0f;
+
+	UPROPERTY(EditAnyWhere, meta = (ClampMin = "0.0", ClampMax = "1.0"), Category = "ZipLine")
+	float StartPoint = 0.0f;
+
+	bool IsFirstTick = true;
 	
 	UPROPERTY(EditAnywhere, Category = "ZipLine")
 	float Speed = 50.0f;
 
-	UPROPERTY(EditAnyWhere, CAtegory = "ZipLine")
+	UPROPERTY(EditAnyWhere, Category = "ZipLine")
 	bool bIsLoop = true;
 
 	

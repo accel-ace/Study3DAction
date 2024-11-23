@@ -32,11 +32,11 @@ public:
 
 public:
 
+	float GetSplineLength();
+
 	FVector GetCurrentLocation(float Length, bool Loop);
 
 private:
-
-	float GetSplineLength();
 
 	bool IsArrived(float Length);
 

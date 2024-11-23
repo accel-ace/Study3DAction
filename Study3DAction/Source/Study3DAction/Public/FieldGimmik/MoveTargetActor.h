@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Target.h"
+#include "ScaffoldActor.h"
 #include "MoveTargetActor.generated.h"
 
 UCLASS()
-class STUDY3DACTION_API AMoveTargetActor : public AActor
+class STUDY3DACTION_API AMoveTargetActor : public AScaffoldActor, public Target
 {
 	GENERATED_BODY()
 	

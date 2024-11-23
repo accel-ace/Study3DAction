@@ -35,6 +35,11 @@ void AZipLineActor::Tick(float DeltaTime)
 
 }
 
+float AZipLineActor::GetSplineLength()
+{
+	return SplineComponent->GetSplineLength();
+}
+
 FVector AZipLineActor::GetCurrentLocation(float Length, bool Loop)
 {
 	LocalLength = Length;
@@ -45,11 +50,6 @@ FVector AZipLineActor::GetCurrentLocation(float Length, bool Loop)
 	FVector Location = SplineComponent->GetLocationAtDistanceAlongSpline(LocalLength, ESplineCoordinateSpace::Type::World);
 
 	return Location;
-}
-
-float AZipLineActor::GetSplineLength()
-{
-	return SplineComponent->GetSplineLength();
 }
 
 bool AZipLineActor::IsArrived(float Length)

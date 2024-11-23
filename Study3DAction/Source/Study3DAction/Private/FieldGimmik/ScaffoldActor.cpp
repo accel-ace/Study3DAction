@@ -15,14 +15,20 @@ AScaffoldActor::AScaffoldActor()
 void AScaffoldActor::BeginPlay()
 {
 	Super::BeginPlay();
-
 }
 
 // Called every frame
 void AScaffoldActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
 	MoveDistanceLocation = MoveDistanceLocation + DeltaTime * Speed;
+
+	if (IsFirstTick) {
+		MoveDistanceLocation = ZipLineActor->GetSplineLength() * StartPoint;
+		IsFirstTick = false;
+	}
+
 	FVector SplineLocation = ZipLineActor->GetCurrentLocation(MoveDistanceLocation, bIsLoop);
 	SetActorLocation(SplineLocation);
 }
