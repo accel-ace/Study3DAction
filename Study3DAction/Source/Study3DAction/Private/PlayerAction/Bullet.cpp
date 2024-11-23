@@ -15,7 +15,9 @@ ABullet::ABullet()
 void ABullet::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	UGameplayStatics::SpawnSound2D(GetWorld(), SoundObject, 1.0f, 1.0f, 0.0f, nullptr, false, false);
+
 }
 
 // Called every frame

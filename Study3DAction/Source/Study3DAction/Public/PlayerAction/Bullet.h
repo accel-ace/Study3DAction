@@ -4,12 +4,18 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Kismet/GameplayStatics.h"
 #include "Bullet.generated.h"
 
 UCLASS()
 class STUDY3DACTION_API ABullet : public AActor
 {
 	GENERATED_BODY()
+
+private:
+
+	UPROPERTY(EditAnywhere, Category = "ShotSound")
+	USoundBase* SoundObject;
 	
 public:	
 	// Sets default values for this actor's properties
