@@ -3,8 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "PlayerAction/Bullet.h"
 #include "Study3DActionCharacter.generated.h"
 
 class USpringArmComponent;
@@ -51,6 +53,11 @@ class AStudy3DActionCharacter : public ACharacter
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* RightAction;
+
+private:
+
+	USkeletalMeshComponent* SkeletalMeshComponent;
+
 public:
 	AStudy3DActionCharacter();
 	

@@ -58,6 +58,13 @@ void AStudy3DActionCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+
+	TArray<UActorComponent*> AActorComponents;
+	this->GetComponents<UActorComponent>(AActorComponents);
+	for (auto& A : GetComponentsByTag(USkeletalMeshComponent::StaticClass(), FName(TEXT("Weapon"))))
+	{
+		SkeletalMeshComponent = Cast<USkeletalMeshComponent>(A);
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -88,9 +95,9 @@ void AStudy3DActionCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AStudy3DActionCharacter::Look);
 
 		// Unique
-		EnhancedInputComponent->BindAction(UniqueAction, ETriggerEvent::Triggered, this, &AStudy3DActionCharacter::Unique);
+		EnhancedInputComponent->BindAction(UniqueAction, ETriggerEvent::Started, this, &AStudy3DActionCharacter::Unique);
 		// Right
-		EnhancedInputComponent->BindAction(RightAction, ETriggerEvent::Triggered, this, &AStudy3DActionCharacter::Right);
+		EnhancedInputComponent->BindAction(RightAction, ETriggerEvent::Started, this, &AStudy3DActionCharacter::Right);
 	}
 	else
 	{
@@ -136,10 +143,22 @@ void AStudy3DActionCharacter::Look(const FInputActionValue& Value)
 
 void AStudy3DActionCharacter::Unique(const FInputActionValue& Value)
 {
-	UE_LOG(LogTemp, Log, TEXT("Push_Unique"));
+	if (SkeletalMeshComponent == nullptr) {
+		UE_LOG(LogTemplateCharacter, Log, TEXT("Push_Unique: SkeletalMeshComponent is null!"));
+		return;
+	}
+
+	FString AssetPath = "/Game/ThirdPerson/Blueprints/PlayerAction/BP_Bullet.BP_Bullet_C";
+	TSubclassOf<ABullet> ActorClass = TSoftClassPtr<ABullet>(FSoftObjectPath(*AssetPath)).LoadSynchronous();
+	if (ActorClass != nullptr) {
+		// 銃弾アクターの射出方向の設定
+		FRotator ActorRotator = FRotator(0, GetActorRotation().Yaw, 90.0);
+		FTransform Transform = FTransform(ActorRotator, SkeletalMeshComponent->GetSocketLocation(FName(TEXT("WeaponSocket"))));
+		TObjectPtr<ABullet> Actor = GetWorld()->SpawnActor<ABullet>(ActorClass, Transform);
+	}
 }
 
 void AStudy3DActionCharacter::Right(const FInputActionValue& Value)
 {
-	UE_LOG(LogTemp, Log, TEXT("Push_Right"));
+	UE_LOG(LogTemplateCharacter, Log, TEXT("Push_Right"));
 }
