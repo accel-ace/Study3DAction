@@ -11,8 +11,15 @@ class AStudy3DActionGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
+private:
+	int Score = 0;
+
 public:
 	AStudy3DActionGameMode();
+
+	void AddScore(int AddScore);
+
+	int GetScore();
 };
 
 

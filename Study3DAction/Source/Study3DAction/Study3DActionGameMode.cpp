@@ -15,3 +15,13 @@ AStudy3DActionGameMode::AStudy3DActionGameMode()
 	}
 	//DefaultPawnClass = AStudy3DActionCharacter::StaticClass();
 }
+
+void AStudy3DActionGameMode::AddScore(int AddScore)
+{
+	Score += AddScore;
+}
+
+int AStudy3DActionGameMode::GetScore()
+{
+	return Score;
+}
