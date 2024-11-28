@@ -3,10 +3,12 @@
 ## 該当ファイル
 
 ### BluePrint(Study3DAction/Content/ThirdPerson/Blueprints/Gimmick)
+
 - BP_ScaffoldActor.uasset
 - BP_ZipLineActor.uasset
 
 ### ソースコード(Study3DAction/Source/Study3DAction/Public/FieldGimmik)
+
 - ScaffoldActor.h
 - ZipLineActor.h
 
@@ -22,6 +24,9 @@
 - ZipLineActor
   - 対応するジップライン
   - 指定したジップライン上の範囲を移動する
+- StartPoint
+  - ジップライン上の移動開始か所
+  - 入力範囲: 0.0~1.0
 - Speed
   - オブジェクトの移動速度
   - デフォルト値: 50.0
